@@ -60,6 +60,7 @@ class Fetchers {
       logger.info(
         `<ye>[${this.bot_name}]</ye> | ${this.session_name} | Proxy IP: ${ip}`
       );
+      return true
     } catch (error) {
       if (
         error.message.includes("ENOTFOUND") ||
