@@ -405,8 +405,10 @@ class ApiRequest {
       const response = await http_client.post(
         `${app.earnApiUrl}/api/v1/tasks/${task_id}/start`
       );
+      console.log(response, "response")
       return response.data;
     } catch (error) {
+      console.log(error, "error");
       if (error?.response?.status >= 500) {
         return false;
       }
