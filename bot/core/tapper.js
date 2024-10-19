@@ -284,10 +284,12 @@ class Tapper {
           );
           await sleep(1);
         }
-        http_client = axios.create({
-          headers: this.headers,
-          withCredentials: true,
-        });
+        http_client = null;
+        // http_client = axios.create({
+        //   headers: this.headers,
+        //   withCredentials: true,
+        // });
+
       }
     } else {
       http_client = axios.create({
